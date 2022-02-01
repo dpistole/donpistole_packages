@@ -1,0 +1,18 @@
+# dependencies 
+node_modules
+
+# build outputs
+dist
+
+# log files
+*.log
+
+# IDE/OS generated files
+.vscode
+.idea
+
+# test coverage output
+coverage
+
+# .env files
+.env

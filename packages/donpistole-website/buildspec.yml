@@ -1,0 +1,28 @@
+version: 0.2
+env:
+  variables:
+    CI: true
+    APP_ENV: production
+phases:
+  install:
+    runtime-versions:
+      nodejs: 12
+    commands:
+      - echo Entered the install phase...
+      # write npmrc file with tokens
+      - envsubst < .npmrc.dist > .npmrc
+      - yarn install
+  pre_build:
+    commands:
+      - echo Entered the pre_build phase...
+      - npm run test
+      - cat .npmrc
+  build:
+    commands:
+      - echo Entered the build phase...
+      - npm run build
+
+artifacts:
+  base-directory: ./dist
+  files:
+    - '**/*'
