@@ -10,7 +10,7 @@ export interface SingleColumnLayoutProps {
 const Container = styled.div`
   width: 100%;
   min-height: 100vh;
-  background: ${({ theme }) => Color(theme.background).darken(0.5).hex()};
+  background: ${({ theme }) => theme.pageBackground};
   overflow-y: auto;
   padding: 5rem 0;
 
@@ -27,6 +27,7 @@ const Content = styled.div`
   border-right: 0.2rem;
   display: flex;
   flex-direction: column;
+  box-shadow: ${({ theme }) => theme.boxShadow()};
 `;
 
 export const SingleColumnLayout = ({ children }: SingleColumnLayoutProps) => (

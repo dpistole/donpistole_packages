@@ -6,10 +6,11 @@ import * as Yup from 'yup';
 import { useDonPistoleApi } from 'hooks';
 import * as statuses from 'constants/status';
 import { Paragraph } from 'apps/2022/components/Paragraph';
+import { NavBar, NavBarLink } from '../../components';
 
 const Container = styled.div`
   width: 100%;
-  background-color: ${({ theme }) => theme.background};
+  background-color: ${({ theme }) => theme.contentBackground};
   padding-bottom: 12rem;
 `;
 
@@ -58,7 +59,7 @@ const InputContainer = styled.div`
     width: 100%;
     height: 4.8rem;
     padding: 0.8rem;
-    background: ${({ theme }) => theme.backgroundColor};
+    background: ${({ theme }) => theme.contentBackground};
     box-shadow: 0 0 1.6rem -0.4rem ${({ theme }) => Color(theme.fontColor).lighten(0.2).string()};
 
     &:hover,
@@ -106,6 +107,7 @@ export const Contact = () => {
 
   return (
     <Container>
+      <NavBar />
       <TextContainer>
         <Paragraph>Want to get in touch?</Paragraph>
         <Paragraph>

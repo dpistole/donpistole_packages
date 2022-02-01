@@ -23,14 +23,14 @@ const Container = styled.div<NavBoxButtonProps>`
   .navbox--icon {
     color: ${({ theme, disabled, active }) => {
       if (disabled) {
-        return Color(theme.background).fade(0.95).string();
+        return Color(theme.pageBackground).darken(0.1).fade(0.2).string();
       }
 
       if (active) {
-        return theme.accentColor;
+        return theme.accentColor1;
       }
 
-      return theme.background;
+      return Color(theme.accentColor1).grayscale();
     }};
   }
 `;

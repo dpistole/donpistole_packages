@@ -14,7 +14,7 @@ export interface ResumeHeaderProps {
 
 const Container = styled.div`
   display: flex;
-  padding: 3.2rem;
+  padding: 1.6rem 3.2rem;
   flex-direction: row;
 
   @media only screen and (max-width: ${breakpoints.mobile}px) {
@@ -75,7 +75,7 @@ const TitleContainer = styled.div`
   font-size: 2.8rem;
   font-weight: bold;
   padding: 0.8rem 0;
-  color: ${({ theme }) => Color(theme.textColor).lighten(0.25).string()};
+  color: ${({ theme }) => theme.accentColor3};
 `;
 
 export const ResumeHeader = ({

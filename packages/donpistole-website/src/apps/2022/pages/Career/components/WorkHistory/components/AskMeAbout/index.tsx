@@ -12,7 +12,7 @@ const Container = styled.div`
 `;
 
 const AskMeAboutLabel = styled.div`
-  color: ${({ theme }) => Color(theme.textColor).string()};
+  color: ${({ theme }) => theme.accentColor4};
   font-family: 'Open Sans';
   font-weight: bold;
   font-size: 1.8rem;

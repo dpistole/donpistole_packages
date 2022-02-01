@@ -18,7 +18,8 @@ const Container = styled.div`
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(3, 1fr);
 
-  background: ${({ theme }) => Color(theme.background).darken(0.5).hex()};
+  background: ${({ theme }) =>
+    Color(theme.pageBackground).lighten(0.2).string()};
 `;
 
 const NavBoxButtonContainer = styled.div`

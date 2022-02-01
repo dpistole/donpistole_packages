@@ -8,7 +8,7 @@ export interface ParagraphProps {
 const Container = styled.p`
   font-size: 2rem;
   text-indent: 3.2rem;
-  line-height: 3.2rem;
+  line-height: 2.8rem;
   margin-top: 1.2rem;
   margin-bottom: 3.2rem;
 `;

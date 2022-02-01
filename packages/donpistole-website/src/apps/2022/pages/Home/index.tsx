@@ -4,67 +4,76 @@ import styled from 'styled-components';
 import Color from 'color';
 import { breakpoints } from 'constants/breakpoints';
 import { routing } from '../../routing';
+import { NavBar, Paragraph, SectionHeader, Column } from 'apps/2022/components';
+import { GitHubLink } from './components/GitHubLink';
+import LeftProgrammerImageSrc from 'assets/images/stock_programmer_left.jpg';
+import RightProgrammerImageSrc from 'assets/images/stock_programmer_right.jpg';
+import LeftProgrammerImage2Src from 'assets/images/stock_programmer_left2.jpg';
 
 const Container = styled.div`
-  display: flex;
   width: 100%;
-  background-color: ${({ theme }) => theme.background};
-  padding: 2.4rem 1.6rem 3.6rem 1.6rem;
-
-  p {
-    padding: 1.6rem 0;
-    line-height: 2rem;
-  }
+  background-color: ${({ theme }) => theme.contentBackground};
 `;
 
-const LeftColumn = styled.div`
-  flex: 1 1 50%;
-
-  // on mobile devices we hide this column
-  @media only screen and (min-width: 0px) and (max-width: ${breakpoints.mobile}px) {
-    display: none;
-  }
-`;
-
-const RightColumn = styled.div`
-  flex: 1 1 50%;
-
-  // on mobile this column takes up the full width
-  @media only screen and (min-width: 0px) and (max-width: ${breakpoints.mobile}px) {
-    flex-basis: 100%;
-  }
-`;
-
-const HelloWorldContainer = styled.div`
-  font-size: 2.4rem;
-  font-weight: bold;
-  color: ${({ theme }) => Color(theme.textColor).lighten(1).string()};
+const Row = styled.div`
+  display: flex;
+  padding: 6rem 1.6rem 3.6rem 1.6rem;
 `;
 
 const IntroductionContainer = styled.div``;
 
+const ImageContainer = styled.div`
+  padding: 1.6rem;
+  box-shadow: ${({ theme }) => theme.boxShadow()};
+  margin: 2.4rem;
+`;
+
+const ResponsiveImage = styled.img`
+  height: auto;
+  width: 100%;
+`;
+
 export const Home = () => (
   <Container>
-    <LeftColumn></LeftColumn>
-    <RightColumn>
-      <IntroductionContainer>
-        <HelloWorldContainer>
-          <p>Hello World.</p>
-        </HelloWorldContainer>
-        <p>
-          Welcome, I&apos;m Don, I build things on the internet. I built this
-          website.
-        </p>
-        <p>
-          I imagine you&apos;re here because you&apos;re me. If so, keep up the
-          good work dude.
-        </p>
-        <p>
-          If you&apos;re not me, maybe you&apos;re a recruiter or potential
-          employer? Check out my{' '}
+    <NavBar />
+    <Row>
+      <Column isHiddenOnMobile>
+        <ImageContainer>
+          <ResponsiveImage src={LeftProgrammerImageSrc} />
+        </ImageContainer>
+      </Column>
+      <Column>
+        <IntroductionContainer>
+          <SectionHeader>Welcome.</SectionHeader>
+          <Paragraph>
+            I&apos;m Don, I build things on the internet. I built this website.
+          </Paragraph>
+          <GitHubLink />
+        </IntroductionContainer>
+      </Column>
+    </Row>
+    <Row>
+      <Column>
+        <SectionHeader>How can I help?</SectionHeader>
+        <Paragraph>
+          If you're a recruiter, or potential employer, may I suggest my{' '}
           <Link to={routing.Career.index()}>career page</Link>.
-        </p>
-      </IntroductionContainer>
-    </RightColumn>
+        </Paragraph>
+        <Paragraph>
+          If not, well... perhaps you can use the{' '}
+          <Link to={routing.Contact.index()}>contact page</Link> to let me know
+          what you're looking for.
+        </Paragraph>
+      </Column>
+      <Column isHiddenOnMobile>
+        <ImageContainer>
+          <ResponsiveImage src={RightProgrammerImageSrc} />
+        </ImageContainer>
+      </Column>
+    </Row>
+    <Row>
+      <Column></Column>
+      <Column></Column>
+    </Row>
   </Container>
 );

@@ -5,7 +5,7 @@ import Color from 'color';
 const Container = styled.div`
   width: 100%;
   min-height: 22.5rem;
-  background: ${({ theme }) => Color(theme.background).darken(0.35).string()};
+  background: ${({ theme }) => theme.contentBackground};
 `;
 
 export const Footer = () => <Container />;

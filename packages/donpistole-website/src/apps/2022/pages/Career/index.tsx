@@ -7,13 +7,13 @@ import { Introduction } from './components/Introduction';
 
 const Container = styled.div`
   width: 100%;
-  background-color: ${({ theme }) => theme.background};
+  background-color: ${({ theme }) => theme.contentBackground};
 `;
 
 export const Career = () => (
   <Container>
     <NavBar>
-      <NavBarLink to="/career">Career</NavBarLink>
+      <NavBarLink to="/career">career</NavBarLink>
     </NavBar>
     <Introduction />
     <WorkHistory />

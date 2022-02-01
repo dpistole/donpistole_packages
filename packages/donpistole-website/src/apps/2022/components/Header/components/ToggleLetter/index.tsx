@@ -13,16 +13,18 @@ interface ToggleLetterContainerProps {
 const ToggleLetterContainer = styled.div.attrs(
   ({ isToggled }: ToggleLetterContainerProps) => ({ isToggled }),
 )`
+  display: inline;
   font-size: 4.8rem;
   font-family: 'Fredoka One';
   color: ${({ theme, isToggled }) => {
     if (isToggled) {
-      return theme.accentColor;
+      return theme.accentColor1;
     }
 
-    return Color(theme.background).darken(0.5).string();
+    return Color(theme.contentBackground).darken(0.5).string();
   }};
   cursor: pointer;
+  user-select: none;
 `;
 
 export const ToggleLetter = ({ children }: ToggleLetterProps) => {

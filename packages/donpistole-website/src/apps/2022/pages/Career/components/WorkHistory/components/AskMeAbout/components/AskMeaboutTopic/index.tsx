@@ -23,7 +23,7 @@ const TopicContainer = styled.div`
   align-items: center;
   font-size: 1.6rem;
   line-height: 2.4rem;
-  color: ${({ theme }) => Color(theme.textColor).lighten(1).string()};
+  color: ${({ theme }) => Color(theme.textColor).string()};
 
   @media only screen and (max-width: ${breakpoints.mobile}px) {
     padding-left: 0;

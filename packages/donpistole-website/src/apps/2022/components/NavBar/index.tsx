@@ -6,14 +6,15 @@ import { NavLink } from 'react-router-dom';
 import { breakpoints } from 'constants/breakpoints';
 
 export interface NavBarProps {
-  children: React.ReactNode;
+  children?: React.ReactNode;
 }
 
 const Container = styled.div`
   height: 7.5rem;
   width: 100%;
   flex: 0 0 5rem;
-  background: ${({ theme }) => Color(theme.background).darken(0.05).hex()};
+  background: ${({ theme }) =>
+    Color(theme.pageBackground).lighten(0.2).string()};
   display: flex;
   flex-direction: row;
   padding: 1.6rem 1.6rem;
@@ -30,24 +31,32 @@ const LinkContainer = styled.div`
 export const NavBarLink = styled(NavLink)`
   border-radius: 0.25rem;
   font-size: 2.4rem;
+  font-family: 'Fredoka One';
   padding: 0.8rem 1.6rem;
+  border-radius: 1.25rem;
   text-decoration: none;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: 'Open Sans';
+  /* font-family: 'Open Sans'; */
   color: ${({ theme }) => theme.textColor};
   outline: none;
 
+  color: ${({ theme }) => theme.accentColor1Text};
+
   &:hover,
   &:focus {
+    border: 0.25rem solid
+      ${({ theme }) => Color(theme.accentColor2).grayscale().string()};
     background-color: ${({ theme }) =>
-      Color(theme.background).darken(0.1).string()};
+      Color(theme.accentColor2).grayscale().string()};
   }
 
   &.active {
+    border: 0.25rem solid
+      ${({ theme }) => Color(theme.accentColor2).darken(0.5).string()};
     background-color: ${({ theme }) =>
-      Color(theme.background).darken(0.15).string()};
+      Color(theme.accentColor2).darken(0.1).string()};
   }
 `;
 
