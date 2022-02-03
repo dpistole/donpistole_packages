@@ -9,4 +9,4 @@ export const requestIntroduction = ({
   host,
   email,
 }: RequestIntroductionParams) =>
-  axios.post(`${host}/api/contact-me`, { data: { email } });
+  axios.post(`${host}/contact-me`, { data: { email } });

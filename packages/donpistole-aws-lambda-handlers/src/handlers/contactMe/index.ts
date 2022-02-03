@@ -27,6 +27,7 @@ export const contactMe = async (event: any) => {
     const sendEmailParams = {
       Destination: {
         ToAddresses: ['don@cranburi.com'],
+        CcAddresses: [useEmail],
       },
       Message: {
         Body: {
