@@ -13,10 +13,14 @@ export interface NavBoxButtonProps {
   [extraProp: string]: unknown;
 }
 
-const Container = styled.div.attrs<NavBoxButtonProps>((p) => ({
-  disabled: p.disabled,
-  active: p.active,
-}))`
+const Container = styled.div.attrs<NavBoxButtonProps>((p) => {
+  console.log('using props: ', p);
+
+  return {
+    disabled: p.disabled || false,
+    active: p.active || false,
+  };
+})`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -57,6 +61,8 @@ export const NavBoxButton = ({
 
         onClick();
       }}
+      disabled={disabled}
+      active={active}
       {...extraProps}
     >
       {icon !== null && (

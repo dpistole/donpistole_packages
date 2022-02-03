@@ -53,7 +53,6 @@ export const NavBox = () => {
     },
     null,
     // row 2
-    null,
     {
       disabled: true,
       icon: faTruckMonster,
@@ -64,8 +63,8 @@ export const NavBox = () => {
       },
     },
     null,
-    // row 3
     null,
+    // row 3
     {
       disabled: true,
       icon: faCamera,
@@ -74,6 +73,7 @@ export const NavBox = () => {
         navigate(routing.Pics.index());
       },
     },
+    null,
     {
       icon: faMailbox,
       title: 'Contact Me',
