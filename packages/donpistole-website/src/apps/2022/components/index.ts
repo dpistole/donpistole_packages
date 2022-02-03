@@ -4,3 +4,4 @@ export * from './NavBar';
 export * from './Paragraph';
 export * from './SectionHeader';
 export * from './Column';
+export * from './Button';
