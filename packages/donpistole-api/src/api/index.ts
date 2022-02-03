@@ -11,3 +11,5 @@ export const createApi = ({ host }: CreateApiParams) => {
       requests.requestIntroduction({ host, ...params }),
   };
 };
+
+export * from './requests';

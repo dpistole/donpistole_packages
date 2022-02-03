@@ -24,18 +24,19 @@ module.exports = {
     react: {
       version: 'detect',
     },
-    "import/parsers": {
-      "@typescript-eslint/parser": [".ts", ".tsx"]
+    'import/parsers': {
+      '@typescript-eslint/parser': ['.ts', '.tsx'],
     },
-    "import/resolver": {
-      "typescript": {}
-    }
+    'import/resolver': {
+      typescript: {},
+    },
   },
   rules: {
     'react/prop-types': 'off',
     'no-console': ['warn'],
     'import/no-extraneous-dependencies': ['error'],
     '@typescript-eslint/ban-ts-comment': 'off',
+    '@typescript-eslint/no-empty-interface': 'off',
   },
   overrides: [
     {

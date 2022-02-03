@@ -13,12 +13,16 @@ export interface NavBoxButtonProps {
   [extraProp: string]: unknown;
 }
 
-const Container = styled.div<NavBoxButtonProps>`
+const Container = styled.div.attrs<NavBoxButtonProps>((p) => ({
+  disabled: p.disabled,
+  active: p.active,
+}))`
   display: flex;
   align-items: center;
   justify-content: center;
 
-  cursor: ${({ disabled }) => (disabled ? 'default' : 'pointer')};
+  cursor: ${({ disabled }: NavBoxButtonProps) =>
+    disabled ? 'default' : 'pointer'};
 
   .navbox--icon {
     color: ${({ theme, disabled, active }) => {
@@ -30,7 +34,7 @@ const Container = styled.div<NavBoxButtonProps>`
         return theme.accentColor1;
       }
 
-      return Color(theme.accentColor1).grayscale();
+      return Color(theme.accentColor1).grayscale().string();
     }};
   }
 `;
@@ -45,7 +49,7 @@ export const NavBoxButton = ({
   return (
     <Container
       role="button"
-      tabindex={0}
+      tabIndex={0}
       onClick={() => {
         if (disabled) {
           return;
@@ -53,8 +57,6 @@ export const NavBoxButton = ({
 
         onClick();
       }}
-      disabled={disabled}
-      active={active}
       {...extraProps}
     >
       {icon !== null && (

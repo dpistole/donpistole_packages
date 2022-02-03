@@ -28,7 +28,6 @@ const NavBoxButtonContainer = styled.div`
   height: 5rem;
   align-items: center;
   justify-content: center;
-  padding: 0.5rem;
 `;
 
 export const NavBox = () => {
