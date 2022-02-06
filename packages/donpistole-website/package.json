@@ -82,6 +82,7 @@
     "eslint-plugin-react": "^7.28.0",
     "file-loader": "^6.2.0",
     "html-webpack-plugin": "^5.5.0",
+    "husky": "^7.0.4",
     "path": "^0.12.7",
     "prettier": "^2.5.1",
     "rimraf": "^3.0.2",
