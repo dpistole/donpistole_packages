@@ -16,7 +16,7 @@
   "scripts": {
     "clean": "rm -rf dist/",
     "lint:es": "npx eslint 'src/**/*.ts{,x}'",
-    "build:es": "node ../../node_modules/.bin/webpack",
+    "build:es": "npx webpack",
     "watch": "npx webpack --watch",
     "build": "npm run clean && npm run build:es"
   },

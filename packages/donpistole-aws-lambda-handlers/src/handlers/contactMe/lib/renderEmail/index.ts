@@ -2,7 +2,7 @@ export const renderEmail = ({ email = '' }) => `
 <html>
 <body>
   <table>
-    <tr style="height: 150px;" >
+    <tr style="height: 50px;" >
       <td>
         &nbsp;
       </td>
