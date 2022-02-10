@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import Color from 'color';
 import { breakpoints } from '../../constants/breakpoints';
 
 export interface SingleColumnLayoutProps {

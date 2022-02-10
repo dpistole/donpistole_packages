@@ -14,8 +14,6 @@ export interface NavBoxButtonProps {
 }
 
 const Container = styled.div.attrs<NavBoxButtonProps>((p) => {
-  console.log('using props: ', p);
-
   return {
     disabled: p.disabled || false,
     active: p.active || false,

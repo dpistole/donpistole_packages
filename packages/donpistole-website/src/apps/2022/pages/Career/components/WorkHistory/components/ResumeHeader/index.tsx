@@ -1,8 +1,7 @@
 import React from 'react';
-import Color from 'color';
 import styled from 'styled-components';
 
-import { breakpoints } from 'constants/breakpoints';
+import { breakpoints } from '../../../../../../../../constants/breakpoints';
 
 export interface ResumeHeaderProps {
   employerName: string;

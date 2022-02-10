@@ -1,14 +1,16 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
-import Color from 'color';
-import { breakpoints } from 'constants/breakpoints';
 import { routing } from '../../routing';
-import { NavBar, Paragraph, SectionHeader, Column } from 'apps/2022/components';
+import {
+  NavBar,
+  Paragraph,
+  SectionHeader,
+  Column,
+} from '../../../../apps/2022/components';
 import { GitHubLink } from './components/GitHubLink';
-import LeftProgrammerImageSrc from 'assets/images/stock_programmer_left.jpg';
-import RightProgrammerImageSrc from 'assets/images/stock_programmer_right.jpg';
-import LeftProgrammerImage2Src from 'assets/images/stock_programmer_left2.jpg';
+import LeftProgrammerImageSrc from '../../../../assets/images/stock_programmer_left.jpg';
+import RightProgrammerImageSrc from '../../../../assets/images/stock_programmer_right.jpg';
 
 const Container = styled.div`
   width: 100%;

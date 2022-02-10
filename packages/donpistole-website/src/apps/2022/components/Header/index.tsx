@@ -1,9 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
-import Color from 'color';
 import { NavBox } from './components/NavBox';
 import { ToggleLetter } from './components/ToggleLetter';
-import { breakpoints } from 'constants/breakpoints';
+import { breakpoints } from '../../../../constants/breakpoints';
 
 const Container = styled.div`
   height: 15rem;

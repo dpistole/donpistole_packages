@@ -10,7 +10,6 @@ import styled from 'styled-components';
 import { routing } from './routing';
 import { SingleColumnLayout } from '../../layouts/SingleColumnLayout';
 import { Header } from './components/Header';
-import { NavBar } from './components/NavBar';
 import { Footer } from './components/Footer';
 import { Home, Career, Contact } from './pages';
 
@@ -19,7 +18,7 @@ const Container = styled.div`
   color: ${({ theme }) => theme.textColor};
 `;
 
-export const App = (): any => {
+export const App = (): JSX.Element => {
   return (
     <Container>
       <Router>

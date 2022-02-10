@@ -3,8 +3,6 @@ import styled from 'styled-components';
 import Color from 'color';
 import { NavLink } from 'react-router-dom';
 
-import { breakpoints } from 'constants/breakpoints';
-
 export interface NavBarProps {
   children?: React.ReactNode;
 }

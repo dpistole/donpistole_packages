@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import { createApi, RequestIntroductionParams } from '@cranburi/donpistole-api';
-import { config } from '../../config';
 import * as statuses from '../../constants/status';
 
 export const useDonPistoleApi = () => {
@@ -8,7 +7,7 @@ export const useDonPistoleApi = () => {
     statuses.EMPTY,
   );
 
-  const DonPistoleApi = createApi({ host: config?.donpistole?.api?.host });
+  const DonPistoleApi = createApi({ host: `${process.env.APP_API_HOST}` });
 
   const requestIntroduction = async (
     params: Omit<RequestIntroductionParams, 'host'>,

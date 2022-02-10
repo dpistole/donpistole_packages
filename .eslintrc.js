@@ -37,6 +37,8 @@ module.exports = {
     'import/no-extraneous-dependencies': ['error'],
     '@typescript-eslint/ban-ts-comment': 'off',
     '@typescript-eslint/no-empty-interface': 'off',
+    // sometimes we prefer the readability of accessing an exported member of a default export (instead of importing the named export directly)
+    'import/no-named-as-default-member': 'off',
   },
   overrides: [
     {

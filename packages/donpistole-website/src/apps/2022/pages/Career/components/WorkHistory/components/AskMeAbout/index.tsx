@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import Color from 'color';
 
 export interface AskMeAboutProps {
   children: React.ReactNode;

@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import Color from 'color';
 
 const Container = styled.div`
   width: 100%;

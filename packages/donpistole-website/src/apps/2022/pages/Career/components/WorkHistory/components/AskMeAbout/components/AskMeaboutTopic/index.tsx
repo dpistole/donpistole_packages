@@ -1,10 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 import Color from 'color';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { IconDefinition } from '@fortawesome/free-solid-svg-icons';
 
-import { breakpoints } from 'constants/breakpoints';
+import { breakpoints } from '../../../../../../../../../../constants/breakpoints';
 
 export interface AskMeAboutTopicProps {
   children: string;

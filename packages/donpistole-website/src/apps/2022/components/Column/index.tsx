@@ -1,6 +1,5 @@
-import React from 'react';
 import styled from 'styled-components';
-import { breakpoints } from 'constants/breakpoints';
+import { breakpoints } from '../../../../constants/breakpoints';
 
 export interface ColumnProps {
   isHiddenOnMobile?: boolean;

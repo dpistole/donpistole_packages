@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 import Color from 'color';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { Button } from 'apps/2022/components';
+import { Button } from '../../../components';
 
 export const Container = styled.div`
   width: 100%;
