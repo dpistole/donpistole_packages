@@ -1,2 +1,5 @@
 dist/
 *.d.ts
+
+# webpack config
+webpack.config.js
