@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBug } from '@fortawesome/pro-duotone-svg-icons';
 
-import { Paragraph } from 'apps/2022/components';
+import { Paragraph } from '../../../../components';
 
 const Container = styled.div`
   display: flex;

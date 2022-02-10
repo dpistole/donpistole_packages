@@ -2,8 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 import { KubraResume } from './components/KubraResume';
 import { NMAResume } from './components/NMAResume';
-import { SectionHeader } from 'apps/2022/components/SectionHeader';
-import { breakpoints } from 'constants/breakpoints';
+import { SectionHeader } from '../../../../components';
+import { breakpoints } from '../../../../../../constants/breakpoints';
 
 const Container = styled.div`
   width: 100%;

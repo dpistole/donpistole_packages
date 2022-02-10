@@ -7,8 +7,8 @@ import { AskMeAbout, AskMeAboutTopic } from '../AskMeAbout';
 
 // TODO fix typing
 // @ts-ignore
-import KubraLogo from 'assets/images/kubra-logo.png';
-import { Paragraph } from 'apps/2022/components/Paragraph';
+import KubraLogo from '../../../../../../../../assets/images/kubra-logo.png';
+import { Paragraph } from '../../../../../../components';
 
 export const KubraResume = () => (
   <ResumeContainer>

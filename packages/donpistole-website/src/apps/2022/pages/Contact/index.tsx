@@ -2,9 +2,9 @@ import React from 'react';
 import { Formik, Form } from 'formik';
 import * as Yup from 'yup';
 
-import { useDonPistoleApi } from 'hooks';
-import * as statuses from 'constants/status';
-import { Paragraph, NavBar } from 'apps/2022/components';
+import { useDonPistoleApi } from '../../../../hooks';
+import * as statuses from '../../../../constants/status';
+import { Paragraph, NavBar } from '../../components';
 import { Loader } from './components/Loader';
 import { Success } from './components/Success';
 import { ErrorMessage } from './components/ErrorMessage';

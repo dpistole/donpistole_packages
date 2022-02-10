@@ -3,3 +3,6 @@ dist/
 
 # webpack config
 webpack.config.js
+
+# jest config
+jest.config.js

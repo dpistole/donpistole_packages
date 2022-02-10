@@ -2,7 +2,7 @@ import React from 'react';
 import Color from 'color';
 import styled from 'styled-components';
 import { useLocation, useNavigate } from 'react-router';
-import { routing } from 'apps/2022/routing';
+import { routing } from '../../../../routing';
 import { faCamera, faTruckMonster } from '@fortawesome/free-solid-svg-icons';
 import {
   faHouse,

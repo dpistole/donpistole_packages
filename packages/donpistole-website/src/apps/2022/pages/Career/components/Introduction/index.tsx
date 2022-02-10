@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { SectionHeader } from 'apps/2022/components/SectionHeader';
-import { Paragraph } from 'apps/2022/components/Paragraph';
+import { SectionHeader, Paragraph } from '../../../../components';
 
 const Container = styled.div`
   padding: 6rem 6rem 2.4rem 6rem;

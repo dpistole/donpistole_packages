@@ -4,11 +4,9 @@ import { ResumeHeader } from '../ResumeHeader';
 import { ResumeBody } from '../ResumeBody';
 import { ResumeContainer } from '../ResumeContainer';
 import { AskMeAbout, AskMeAboutTopic } from '../AskMeAbout';
-import { Paragraph } from 'apps/2022/components/Paragraph';
+import { Paragraph } from '../../../../../../components';
 
-// TODO fix typing
-// @ts-ignore
-import NMALogo from 'assets/images/nma-logo.png';
+import NMALogo from '../../../../../../../../assets/images/nma-logo.png';
 
 export const NMAResume = () => (
   <ResumeContainer>
